@@ -13,8 +13,8 @@ def hello():
 
 @app.get("/project_infos")
 def getFunction():
-    # body of request
     req_body = request.form
+    
     # to return a json list you need call the jsonify function
     return jsonify([{
         "author": "Hernande Monteiro",
