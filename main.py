@@ -14,13 +14,13 @@ def hello():
 @app.get("/project_infos")
 def getFunction():
     # body of request
-    req = request.form
+    req_body = request.form
     # to return a json list you need call the jsonify function
     return jsonify([{
         "author": "Hernande Monteiro",
         "Framework": "Flask",
         "name": "flask_web_and_api",
-        "request": req
+        "request": req_body
     },
         {
         "developer": "Hernande Monteiro",
