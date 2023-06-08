@@ -8,13 +8,12 @@ def hello():
     return render_template("hello.html")
 
 
-@app.get("/get")
+@app.get("/project_infos")
 def getFunction():
     return {
-        "name": "Hernande Monteiro",
-        "method": "GET",
+        "author": "Hernande Monteiro",
         "Framework": "Flask",
-        "Response": "Json - Dict"
+        "name": "flask_web_and_api"
     }
 
 
