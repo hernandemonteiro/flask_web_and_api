@@ -5,6 +5,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
+    # and to acess in the html the variable we need {{...}}, but
+    # in case of iteration
+    # likes for we needs {%...%}
     return render_template("hello.html", name="Hernande Monteiro")
 
 
