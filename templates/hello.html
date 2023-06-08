@@ -4,12 +4,29 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Flask Web and API</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        user-select: none;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
       <div class="page-header">
         <h1>Bem vindos a nossa página web criadas com Flask</h1>
-        <h2>Hernande Monteiro</h2>
+        <!-- to acess the variable we need {{...}}, but in case of iteration likes for we needs {%...%} -->
+        <h1>{{ name }}</h1>
       </div>
     </div>
   </body>
