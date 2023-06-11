@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: list src
-      run: ls -la
+      run: pwd
     - name: Run playbook
       uses: dawidd6/action-ansible-playbook@v2
       with:
         playbook: playbook.yml
-        directory: /home/runner/work/flask_web_and_api/flask_web_and_api/terraform_flask_run
+        directory: /terraform_flask_run
         key: ${{secrets.FLASKTERRAFORM}}
         options: |
           --inventory .hosts
