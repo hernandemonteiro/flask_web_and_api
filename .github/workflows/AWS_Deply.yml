@@ -15,9 +15,9 @@ jobs:
       run: cd terraform_flask_run/ && pwd
     - name: create file
       run: |
-       cd terraform_flask_run/ && echo "$FLASK_AWS" > flask-terraform.pem
+       cd terraform_flask_run/ && echo "$FLASK_AWS" > flask-terraform.txt
     - name: list folder
-      run: cd terraform_flask_run/ && cat flask-terraform.pem
+      run: cd terraform_flask_run/ && cat flask-terraform.txt
     - name: deploy via ansible
       run: cd terraform_flask_run/ && ansible-playbook playbook.yml -u ubuntu --private-key flask-terraform.pem -i hosts.yml
 
