@@ -13,13 +13,13 @@ jobs:
       uses: actions/checkout@v2
     - name: go to path of files
       run: cd terraform_flask_run/ && pwd
-    - shell: bash
+    - name: create file
       env:
         SUPER_SECRET: ${{ secrets.FLASKTERRAFORM }}
       run: |
        cd terraform_flask_run/ && echo "$SUPER_SECRET" > flask-terraform.pem
     - name: list folder
-      run: ls
+      run: cd terraform_flask_run/ && cat flask-terraform.pem
     - name: deploy via ansible
       run: cd terraform_flask_run/ && ansible-playbook playbook.yml -u ubuntu --private-key flask-terraform.pem -i hosts.yml
 
