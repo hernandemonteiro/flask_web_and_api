@@ -14,10 +14,8 @@ jobs:
     - name: go to path of files
       run: cd terraform_flask_run/ && pwd
     - name: create file
-      env:
-        SUPER_SECRET: ${{ secrets.FLASKTERRAFORM }}
       run: |
-       cd terraform_flask_run/ && echo "$SUPER_SECRET" > flask-terraform.pem
+       cd terraform_flask_run/ && echo "$FLASK_AWS" > flask-terraform.pem
     - name: list folder
       run: cd terraform_flask_run/ && cat flask-terraform.pem
     - name: deploy via ansible
