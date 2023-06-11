@@ -2,7 +2,7 @@
 
 # Este Projeto (Notas e Docs)
 
-Projeto desenvolvido em flask que documenta ferramentas e anotações obtidas no decorrer de meus desenvolvimentos.
+Projeto desenvolvido em flask para documentar ferramentas e anotações obtidas no decorrer de meus desenvolvimentos.
 
 A ideia é capturar conhecimento com as práticas utilizadas em projetos e estudos para desenvolver boas práticas de código e segurança em aplicações e serviços.
 
