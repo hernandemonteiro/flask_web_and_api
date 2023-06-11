@@ -1,4 +1,4 @@
-# Um Bate-Papo sobre Dev Techs
+# Um Bate-Papo sobre Techs
 
 Vamos conversar sobre algumas das tecnologias mais utilizadas pelos desenvolvedores e como elas podem ser uma excelente opção de aprendizado e crescimento na área da programação.
 <br/>
