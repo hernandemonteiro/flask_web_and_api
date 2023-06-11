@@ -14,7 +14,7 @@ jobs:
     - name: go to path of files
       run: cd terraform_flask_run/ && pwd
     - shell: bash
-      run: sudo echo "$FLASK_AWS" > /terraform_flask_run/flask-terraform.pem
+      run: cd terraform_flask_run/ && echo "$FLASK_AWS" > flask-terraform.pem
     - name: list folder
       run: cd terraform_flask_run/ && chmod 400 flask-terraform.pem && sudo cat flask-terraform.pem
     - name: deploy via ansible
