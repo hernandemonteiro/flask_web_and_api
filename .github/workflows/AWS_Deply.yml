@@ -9,14 +9,14 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: checkout repo
-      uses: actions/checkout@v2
-    - name: go to path of files
-      run: cd terraform_flask_run/ && pwd
-    - name: creating file
-      run: cd terraform_flask_run/ && echo "$FLASK_AWS" > flask-terraform.pem
-    - name: list folder
-      run: cd terraform_flask_run/ && chmod 400 flask-terraform.pem && sudo cat flask-terraform.pem
-    - name: deploy via ansible
-      run: cd terraform_flask_run/ && ansible-playbook playbook.yml -u ubuntu --private-key flask-terraform.pem -i hosts.yml
-
+    - name: Run playbook
+      uses: dawidd6/action-ansible-playbook@v2
+      with:
+        playbook: playbook.yml
+        directory: ./terraform_flask_run
+        key: ${{secrets.FLASKTERRAFORM}}
+        options: |
+          --inventory .hosts
+          --limit group1
+          --extra-vars hello=there
+          --verbose
