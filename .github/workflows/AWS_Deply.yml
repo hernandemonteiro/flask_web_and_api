@@ -1,0 +1,27 @@
+name: Deploy Ansible AWS
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout repo
+      uses: actions/checkout@v2
+    - name: Ansible Playbook
+      uses: ansible/ansible-lint-action@master
+      with:
+        targets: ""
+  deployAnsible:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: go to path of files
+        run: cd terraform_flask_run/
+      - name: creating key
+        run: echo {{ secrets.FLASKTERRAFORM}} > flask-terraform.pem
+      - name: list if its right
+        run: cat flask-terraform.pem
