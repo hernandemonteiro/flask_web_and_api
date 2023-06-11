@@ -39,8 +39,16 @@ def template(markdown, title):
                 text-transform: uppercase;\
                 font-family: sans-serif;\
                 }'
-    templateString = f'<html lang="pt-BR"><body>\
-                        <title>{title}</title>\
+    favicon = "{{ url_for('static', filename='3d-python-programming-language-logo-free-png.webp') }}";
+    templateString = f'<html lang="pt-BR">\
+                            <head>\
+                            <title>{title}</title>\
+                             <link\
+                                rel="shortcut icon"\
+                                href={favicon}\
+                                />\
+                            <head/>\
+                            <body>\
                             <a href="/">\
                                 Voltar ao Inicio\
                             </a>\

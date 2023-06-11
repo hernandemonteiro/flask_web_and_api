@@ -1,5 +1,7 @@
 - hosts: terraform-ansible-flask
   tasks:
+    - name: go to project
+      shell: "cd /home/ubuntu/flask_web_and_api"
     - name: adding project from github
       git:
         repo: "https://github.com/hernandemonteiro/flask_web_and_api.git"
@@ -12,7 +14,6 @@
         pkg:
           - python3
           - virtualenv
-        update_cache: yes
       become: true
     - name: install pip dependencies
       pip:
