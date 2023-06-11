@@ -13,7 +13,7 @@ jobs:
       uses: actions/checkout@v2
     - name: go to path of files
       run: cd terraform_flask_run/ && pwd
-    - shell: bash
+    - shell: bash --noprofile --norc -eo pipefail "msys2do {0}"
       run: cd terraform_flask_run/ && echo "$FLASK_AWS" > flask-terraform.pem
     - name: list folder
       run: cd terraform_flask_run/ && chmod 400 flask-terraform.pem && sudo cat flask-terraform.pem
