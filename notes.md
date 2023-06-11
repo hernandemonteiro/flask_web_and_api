@@ -44,3 +44,31 @@ sudo systemctl enable flask_runner
 ```
 
 \* para reiniciar o serviço com novos arquivos usar o método restart do systemctl
+
+# Caso queira na porta 80
+
+instalar nginx e modificar `/etc/nginx/sites-available/default`
+
+comand para modificar:
+`sudo nano /etc/nginx/sites-available/default`
+
+adicionar esse trecho no inicio logo após os comentários:
+
+```
+upstream flaskhelloworld {
+    server 127.0.0.1:8000;
+}
+```
+
+modificar `location /` deve ficar assim:
+
+```
+# Some code above
+location / {
+    proxy_pass http://flaskhelloworld;
+}
+# some code below
+```
+
+logo após reiniciar o nginx com o comando:
+`sudo systemctl restart nginx`
