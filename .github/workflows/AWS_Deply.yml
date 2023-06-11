@@ -18,5 +18,6 @@ jobs:
         SUPER_SECRET: ${{ secrets.FLASKTERRAFORM }}
       run: |
        echo "$SUPER_SECRET" > flask-terraform.pem
-    - name: list if its right
-      run: cat flask-terraform.pem && echo "Tudo top!"
+    - name: deploy via ansible
+      run: ansible-playbook playbook.yml -u ubuntu --private-key flask-terraform.pem -i hosts.yml
+
