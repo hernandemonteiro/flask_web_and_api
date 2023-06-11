@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, redirect
+from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
 
@@ -15,11 +15,6 @@ def getFunction():
         "Framework": "Flask",
         "repository_name": "flask_web_and_api",
     }])
-
-
-@app.get("/redirect")
-def redirectFunction():
-    return redirect("/")
 
 
 if (__name__ == "__main__"):
