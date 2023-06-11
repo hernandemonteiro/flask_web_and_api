@@ -4,7 +4,7 @@
       shell: "cd /home/ubuntu/flask_web_and_api"
     - name: adding project from github
       git:
-        repo: "https://github.com/hernandemonteiro/flask_web_and_api.git"
+        repo: "https://github.com/hernandemonteiro/solutions.git"
         dest: /home/ubuntu/flask_web_and_api
         update: yes
         force: yes
