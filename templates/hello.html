@@ -61,6 +61,10 @@
       .links_lists > a:hover {
         font-size: 1.5em;
       }
+
+      .links_lists > a:visited {
+        color: gray;
+      }
     </style>
   </head>
   <body>
@@ -102,7 +106,9 @@
               </div>
               <div class="modal-body">
                 <div class="links_lists">
-                  <a href="/pt-br/techs">Tecnologias Discutidas</a>
+                  {% for page in pages: %}
+                  <a href="{{page.link}}">{{page.title}}</a>
+                  {% endfor %}
                 </div>
               </div>
               <div class="modal-footer">
@@ -122,7 +128,7 @@
           <a href="/project_infos">clique aqui</a>
         </p>
         <p class="ceo">
-          Designed and developed by 
+          Designed and developed by
           <a href="https://hernandemonteiro.vercel.app" target="_blank"
             >{{ name }}</a
           >

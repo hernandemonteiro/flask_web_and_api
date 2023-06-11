@@ -1,3 +1,6 @@
+import markdown.extensions.fenced_code
+
+
 def template(markdown, title):
     style = '* {\
                 padding: 0px;\
@@ -39,7 +42,8 @@ def template(markdown, title):
                 text-transform: uppercase;\
                 font-family: sans-serif;\
                 }'
-    favicon = "{{ url_for('static', filename='3d-python-programming-language-logo-free-png.webp') }}";
+    favicon = "{{ url_for('static',\
+          filename='3d-python-programming-language-logo-free-png.webp') }}"
     templateString = f'<html lang="pt-BR">\
                             <head>\
                             <title>{title}</title>\
@@ -57,3 +61,12 @@ def template(markdown, title):
                         </body></html>'
 
     return templateString
+
+
+def render_markdown(file, title):
+    readme_file = open(file, "r")
+    md_template_string = markdown.markdown(
+        readme_file.read(), extensions=["fenced_code"]
+    )
+
+    return template(md_template_string, title)

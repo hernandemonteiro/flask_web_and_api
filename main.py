@@ -1,24 +1,18 @@
 from flask import Flask, render_template, jsonify
-import markdown.extensions.fenced_code
-from utils.markdown import template
+from utils.markdown import render_markdown
+from models.DocPage import DocPage
 
 
 app = Flask(__name__)
 
+links = [
+    DocPage("/pt-br/techs", "Dev Techs", "docs/pt-BR/technologies.md")
+]
+
 
 @app.route("/")
 def hello():
-    return render_template("hello.html", name="Hernande Monteiro")
-
-
-@app.route("/pt-br/techs")
-def technologies():
-    readme_file = open("docs/pt-BR/technologies.md", "r")
-    md_template_string = markdown.markdown(
-        readme_file.read(), extensions=["fenced_code"]
-    )
-
-    return template(md_template_string, "Tecnologias")
+    return render_template("hello.html", name="Hernande Monteiro", pages=links)
 
 
 @app.get("/project_infos")
@@ -30,6 +24,13 @@ def getFunction():
         "github:repo": "https://github.com/hernandemonteiro/flask_web_and_api",
         "server": "AWS EC2"
     }])
+
+
+for route in links:
+    @app.route(route.link)
+    def techs():
+        return render_markdown(route.file,
+                               route.title)
 
 
 if (__name__ == "__main__"):
