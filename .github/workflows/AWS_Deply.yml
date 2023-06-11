@@ -12,8 +12,8 @@ jobs:
     - name: checkout repo
       uses: actions/checkout@v2
     - name: go to path of files
-      run: cd terraform_flask_run/
+      run: cd terraform_flask_run/ && pwd
     - name: creating key
-      run: echo {{ secrets.FLASKTERRAFORM}} > flask-terraform.pem
+      run: echo ${{ secrets.FLASKTERRAFORM }} > flask-terraform.pem
     - name: list if its right
-      run: cat flask-terraform.pem
+      run: cat flask-terraform.pem && echo "Tudo top!"
