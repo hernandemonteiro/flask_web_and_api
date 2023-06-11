@@ -1,0 +1,6 @@
+{
+  "name": "flask_web_and_api",
+  "scripts": {
+    "ansible:deploy": "ansible-playbook terraform_flask_run/playbook.yml -u ubuntu --private-key terraform_flask_run/flask-terraform.pem -i terraform_flask_run/hosts.yml"
+  }
+}

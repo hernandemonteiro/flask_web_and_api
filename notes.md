@@ -75,6 +75,8 @@ logo após reiniciar o nginx com o comando:
 
 # Ansible
 
+criei um package.json para rodar o script automaticamente.
+
 path:
 `/terraform_flask_run`
 
