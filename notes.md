@@ -72,3 +72,14 @@ location / {
 
 logo após reiniciar o nginx com o comando:
 `sudo systemctl restart nginx`
+
+# Ansible
+
+path:
+`/terraform_flask_run`
+
+Comando:
+`ansible-playbook playbook.yml -u ubuntu --private-key flask-terraform.pem -i hosts.yml`
+
+Dependencia:
+`flask-terraform.pem`
