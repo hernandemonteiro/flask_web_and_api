@@ -7,8 +7,15 @@
       rel="shortcut icon"
       href="{{ url_for('static', filename='3d-python-programming-language-logo-free-png.webp') }}"
     />
-
-    <title>Flask Web and API</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <title>
+      Hernande Monteiro - Documentações, Boas Práticas e outras notas.
+    </title>
     <style>
       * {
         padding: 0px;
@@ -25,18 +32,117 @@
         user-select: none;
         background-color: rgb(41, 40, 40);
         color: greenyellow;
+        font-family: sans-serif;
+      }
+      h1 {
+        text-transform: uppercase;
+      }
+      .ceo {
+        left: 5%;
+        position: fixed;
+        bottom: 10px;
+        text-align: center;
+      }
+      p > a {
+        color: greenyellow;
+      }
+
+      .project_infos {
+        margin-top: 5%;
+      }
+
+      .links_lists > a {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.4em;
+        color: greenyellow;
+      }
+
+      .links_lists > a:hover {
+        font-size: 1.5em;
       }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="page-header">
-        <h1>HM SOLUTIONS</h1>
+        <h1><b>Hernande Monteiro</b></h1>
         <br />
-        <h1>Bem vindos ao nosso universo!</h1>
+        <h1>"Notas, Documentações e Boas Práticas"</h1>
         <br />
-        <p>CEO: {{ name }}</p>
+        <!-- Button trigger modal -->
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop"
+        >
+          MOSTRAR LISTA
+        </button>
+
+        <!-- Modal -->
+        <div
+          class="modal fade dark"
+          id="staticBackdrop"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="staticBackdropLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div
+              class="modal-content"
+              style="background-color: rgb(41, 40, 40)"
+            >
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                  LISTA DE DOCUMENTOS
+                </h1>
+              </div>
+              <div class="modal-body">
+                <div class="links_lists">
+                  <a href="/pt-br/techs">Tecnologias Discutidas</a>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  data-bs-dismiss="modal"
+                >
+                  FECHAR
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="project_infos">
+          * para informações técnicas deste serviço
+          <a href="/project_infos">clique aqui</a>
+        </p>
+        <p class="ceo">
+          Software Engineer and CEO:
+          <a href="https://hernandemonteiro.vercel.app" target="_blank"
+            >{{ name }}</a
+          >
+        </p>
       </div>
     </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+      integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
