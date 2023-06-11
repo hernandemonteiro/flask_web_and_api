@@ -1,7 +1,5 @@
 - hosts: terraform-ansible-flask
   tasks:
-    - name: go to the path
-      shell: "cd /home/ubuntu/flask_web_and_api"
     - name: adding project from github
       git:
         repo: "https://github.com/hernandemonteiro/flask_web_and_api.git"
@@ -15,7 +13,7 @@
           - python3
           - virtualenv
         update_cache: yes
-      become: yes
+      become: true
     - name: install pip dependencies
       pip:
         virtualenv: /home/ubuntu/flask_web_and_api/venv
@@ -24,4 +22,4 @@
       systemd:
         name: flask_runner
         state: restarted
-      become: yes
+      become: true
