@@ -20,8 +20,8 @@ def getFunction():
     return jsonify([{
         "Author": "Hernande Monteiro",
         "Framework": "Flask",
-        "repository_name": "flask_web_and_api",
-        "github:repo": "https://github.com/hernandemonteiro/flask_web_and_api",
+        "repository_name": "solutions",
+        "github:repo": "https://github.com/hernandemonteiro/solutions",
         "server": "AWS EC2"
     }])
 
