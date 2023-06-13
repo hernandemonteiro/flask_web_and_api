@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 links = [
     DocPage("/pt-br/techs", "Dev Techs", "docs/pt-BR/technologies.md"),
-    DocPage("/pt-br/nextjs", "NextJS", "docs/pt-BR/nextjs.md"),
+    DocPage("/pt-br/nextjs", "NextJS", "docs/pt-BR/nextjs.md")
 ]
 
 
