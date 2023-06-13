@@ -27,11 +27,16 @@ def getFunction():
     }])
 
 
-for route in links:
-    @app.route(route.link)
-    def techs():
-        return render_markdown(route.file,
-                               route.title)
+@app.route(links[0].link)
+def techs():
+    return render_markdown(links[0].file,
+                           links[0].title)
+
+
+@app.route(links[1].link)
+def nextjs():
+    return render_markdown(links[1].file,
+                           links[1].title)
 
 
 if (__name__ == "__main__"):
