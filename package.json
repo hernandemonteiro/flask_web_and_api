@@ -1,6 +1,7 @@
 {
   "name": "flask_web_and_api",
   "scripts": {
-    "ansible:deploy": "ansible-playbook terraform_flask_run/playbook.yml -u ubuntu --private-key terraform_flask_run/flask-terraform.pem -i terraform_flask_run/hosts.yml"
+    "ansible:deploy": "ansible-playbook terraform_flask_run/playbook.yml -u ubuntu --private-key terraform_flask_run/flask-terraform.pem -i terraform_flask_run/hosts.yml",
+    "ec2:connect": "ssh -i 'terraform_flask_run/flask-terraform.pem' ubuntu@ec2-54-218-78-27.us-west-2.compute.amazonaws.com"
   }
 }
