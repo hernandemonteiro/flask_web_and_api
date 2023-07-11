@@ -7,7 +7,7 @@ O aprendizado tecnológico, programação em meu caso, é desde seu principio um
 Quando comecei a estudar programação, no final de 2017 e começo de 2018, a carga de responsabilidade parecia não ser tão grande quanto a atual (2023).
 
 
-Atualmente temos vagas no mercado cobrando hard-skills de um time completo para que a pessoa seja apta a vga, e as vagas para Juniors se estreitaram, devido a posição e crescimento dos projetos e inclusive pela mudança econômica mundial.
+Atualmente temos vagas no mercado cobrando hard-skills de um time completo para que a pessoa seja apta a vaga, e as vagas para Juniors se estreitaram, devido a posição e crescimento dos projetos e inclusive pela mudança econômica mundial.
 
 
 #### Mas enfim como cheguei aqui?
@@ -58,3 +58,11 @@ A virtude do codificador é se atualizar todos os dias, acredito que com a inici
 Hoje posso dizer que jogo algumas palavras ao vento, outras consigo esclarecer e esmiuçar com cuidado e clareza...
 
 mas ainda a muito o que aprender...
+
+
+#### conclusão?
+
+Caso exista alguém lendo, e seja iniciante:
+
+Siga um roadmap e escolha uma area, depois que tiver a base, pode ( e é aconselhavel ) aprender outras areas, mas foque em uma e se torne bom...
+
