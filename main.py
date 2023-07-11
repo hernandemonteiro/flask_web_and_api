@@ -7,7 +7,10 @@ app = Flask(__name__)
 
 links = [
     DocPage("/pt-br/techs", "Dev Techs", "docs/pt-BR/technologies.md"),
-    DocPage("/pt-br/nextjs", "NextJS", "docs/pt-BR/nextjs.md")
+    DocPage("/pt-br/nextjs", "NextJS", "docs/pt-BR/nextjs.md"),
+    DocPage("/pt-br/o_codificador", "O Codificador",
+            "docs/pt-BR/o_codificador.md")
+
 ]
 
 
@@ -37,6 +40,12 @@ def techs():
 def nextjs():
     return render_markdown(links[1].file,
                            links[1].title)
+
+
+@app.route(links[2].link)
+def o_codificador():
+    return render_markdown(links[2].file,
+                           links[2].title)
 
 
 if (__name__ == "__main__"):
