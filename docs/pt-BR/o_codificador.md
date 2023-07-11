@@ -32,10 +32,10 @@ Parti para cursos online e livros que me auxiliaram, no inicio bati a cabeça te
 
 No final de 2019, cansado de mudar projetos e concertar alguns erros do ano anterior, comecei a estudar um roadmap mais definido, voltei atrás em algumas etapas que tinha aplicado e comecei a rever as bases da programação, quando percebi, a base revisada, entendi que não importa a linguagem e que ferramentas são formas de diminuir riscos e aumentar a entrega com qualidade, enquanto as boas práticas são guias para que possamos tornar legivel e inteligivel o que começamos, uma vez que vamos precisar mudar no futuro...
 
-```
+<p align="center">
 Códigos são eternos padrões variáveis...
 - Hernande Monteiro
-```
+</p>
 
 Depois disso...
 
