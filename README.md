@@ -12,11 +12,6 @@ Todas as rotas são escritas em markdown, facilitando reuso caso necessário e e
 
 basta criar o arquivo ".md" em `/docs/` e após adicionar uma nova instancia da classe `DocPage` a lista `links` no arquivo `/main.py`.
 
-# Infra as Code
-
-Uso de terraform para provisionar instância de EC2 na aws e
-Ansible para trabalhar com versionamento de código.
-
 # Project Structure
 
 `main.py`: define as rotas e funções/metodos a serem chamados.
@@ -34,9 +29,6 @@ Ansible para trabalhar com versionamento de código.
 <br/>
 
 `/utils`: código reutilizavel ou helpers.
-<br/>
-
-`terraform_flask_run`: todos arquivos do Terraform e Ansible.
 <br/>
 
 `/venv`: virtual environment do projeto.

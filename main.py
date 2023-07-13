@@ -26,7 +26,7 @@ def getFunction():
         "Framework": "Flask",
         "repository_name": "solutions",
         "github:repo": "https://github.com/hernandemonteiro/solutions",
-        "server": "AWS EC2"
+        "server": "vercel/@python"
     }])
 
 
