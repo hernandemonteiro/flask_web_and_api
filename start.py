@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, jsonify, render_template
 from utils.markdown import render_markdown
 from models.DocPage import DocPage
 
@@ -10,17 +10,17 @@ links = [
     DocPage("/pt-br/nextjs", "NextJS", "docs/pt-BR/nextjs.md"),
     DocPage("/pt-br/o_codificador", "O Codificador",
             "docs/pt-BR/o_codificador.md")
-
 ]
 
 
 @app.route("/")
 def hello():
-    return render_template("hello.html", name="Hernande Monteiro", pages=links)
+    return render_template("hello.html", name="Hernande Monteiro",
+                           pages=links)
 
 
-@app.get("/project_infos")
-def getFunction():
+@app.route("/project_infos")
+def getProjectInfos():
     return jsonify([{
         "Author": "Hernande Monteiro",
         "Framework": "Flask",
